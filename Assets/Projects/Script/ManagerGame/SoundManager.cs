@@ -16,12 +16,12 @@ namespace Projects.Script.Manager
         {
             if (_instance != null)
             {
-                Destroy(this);
+                Destroy(gameObject);
                 return;
             }
 
             _instance = this;
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(gameObject);
             this.PlayThemeMuSic("TheMagic1");
         }
 

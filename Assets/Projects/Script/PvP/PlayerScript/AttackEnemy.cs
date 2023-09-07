@@ -36,7 +36,7 @@ public class AttackEnemy : MonoBehaviour
         int attack = transform.GetComponent<Card>().attack;
         if (attack >= health)
         {
-           // StartCoroutine(other, health);
+            StartCoroutine(DeductAttack(other));
         }
         else
         {
@@ -47,16 +47,13 @@ public class AttackEnemy : MonoBehaviour
         other.GetComponent<Card>().attack = health;
     }
 
-    IEnumerator DeductAttack(GameObject other, int health)
+    IEnumerator DeductAttack(Collider2D other)
     {
-        other.transform.Find("TextReceiver").GetComponentInChildren<ShowDamageReceiver>().StartShow(health);
-        health -= health;
-        other.transform.LeanScale(new Vector3(0f, 0f), 1.3f);
-        yield return  new WaitForSeconds(2f);
-        //xu li tiep phan thoat ra khoi slot
+        other.transform.Find("TextReceiver").GetComponentInChildren<ShowDamageReceiver>().StartShow(other.GetComponent<Card>().attack);
+        yield return new WaitForSeconds(0.2f);
+        other.GetComponent<Card>().attack = 0;
+        yield return new WaitForSeconds(1.5f);
+        other.transform.LeanScale(new Vector3(0f, 0f), 2.3f).setEase((LeanTweenType.easeOutElastic));
         other.transform.SetParent(transform.root);
-        
-        
-        
     }
 }

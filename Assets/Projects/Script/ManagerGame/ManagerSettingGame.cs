@@ -22,7 +22,7 @@ namespace Projects.Script.MenuScripts
         private void CheckMusicOn()
         {
             int checkMusic;
-            checkMusic = PlayerPrefs.GetInt("isMusicOn", 0);
+            checkMusic = PlayerPrefs.GetInt("isMusicOn", 1);
             if (checkMusic==1)
             {
                 isMusicOn = true;
@@ -36,7 +36,7 @@ namespace Projects.Script.MenuScripts
         private void CheckVfxOn()
         {
             int checkVfx;
-            checkVfx = PlayerPrefs.GetInt("isVfxOn", 0);
+            checkVfx = PlayerPrefs.GetInt("isVfxOn", 1);
             if (checkVfx==1)
             {
                 isVfxOn = true;

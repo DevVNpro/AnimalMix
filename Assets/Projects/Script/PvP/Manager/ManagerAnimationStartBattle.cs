@@ -90,12 +90,8 @@ namespace Projects.Script.PvP
              LeanTween.move(backgroundBattleYellow, new Vector3(backgroundBattleYellow.anchoredPosition.x, -1914f), 1f);
             yield return new WaitForSeconds(1f);
             whiteTriangle.SetActive(true);
-        /*    yield return new WaitForSeconds(1f);
-            parrtenYellow.SetActive(true);
-            parrtenBlue.SetActive(true);*/
             Animation2();
             yield return new WaitForSeconds(1f);
-
             parrtenYellow.SetActive(true);
             parrtenBlue.SetActive(true);
             yield return new WaitForSeconds(1f);
@@ -108,6 +104,7 @@ namespace Projects.Script.PvP
             {
                 enemy.localScale = new Vector3(1,1,1);
                 LeanTween.move(enemy, new Vector3(enemy.anchoredPosition.x, -185f), 0.5f);
+                SoundManager.Instance.PlayVfxMuSic("EnemyMove");
                 yield return new WaitForSeconds(1f);
             }
             
@@ -157,7 +154,7 @@ namespace Projects.Script.PvP
             
             //Set Animation
             DeckGrid.SetActive(false);
-            TeamGrid.rectTransform.LeanMove(new Vector3(0f, -470f), 0.6f);
+            TeamGrid.rectTransform.LeanMove(new Vector3(0f, -540f), 0.6f).setEase(LeanTweenType.linear);
         }
 
         private void Animation2()

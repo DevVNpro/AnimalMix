@@ -86,6 +86,8 @@ namespace Projects.Script.PvP.PlayerScript
                 transformButton = Slot1.GetComponentInChildren<Button>().transform;
                 blockSpam.SetActive(true);
                 StartCoroutine(SetMoveAttack(transformButton));
+                positionEnemyClick.SettranformEnemy();
+
             }
            
         }
@@ -97,6 +99,7 @@ namespace Projects.Script.PvP.PlayerScript
                 transformButton = Slot2.GetComponentInChildren<Button>().transform;
                 blockSpam.SetActive(true);
                 StartCoroutine(SetMoveAttack(transformButton));
+                positionEnemyClick.SettranformEnemy();
             }
            
         }
@@ -108,6 +111,7 @@ namespace Projects.Script.PvP.PlayerScript
                 transformButton = Slot3.GetComponentInChildren<Button>().transform;
                 blockSpam.SetActive(true);
                 StartCoroutine(SetMoveAttack(transformButton));
+                positionEnemyClick.SettranformEnemy();
             }
           
         }

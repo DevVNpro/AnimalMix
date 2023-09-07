@@ -8,6 +8,11 @@ namespace Projects.Script.PvP.EnemyCard
     {
 
         [SerializeField] private TextMeshProUGUI textDamageReceiver;
+
+        public int positionX;
+        public int positionUpY;
+        public int positionDownY;
+
         // Start is called before the first frame update
 
         public void StartShow(int damage)
@@ -24,7 +29,7 @@ namespace Projects.Script.PvP.EnemyCard
             TextMoveUp();
             yield return  new WaitForSeconds(2f);
             textDamageReceiver.text = "-";
-            rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x,-218f);
+            rectTransform.anchoredPosition = new Vector2(positionX,positionDownY);
             rectTransform.localScale = new Vector3(0,0,0);
             
         }
@@ -32,7 +37,7 @@ namespace Projects.Script.PvP.EnemyCard
         public void TextMoveUp()
         {
             RectTransform rectTransform = GetComponent<RectTransform>();
-            LeanTween.move(rectTransform, new Vector3(rectTransform.anchoredPosition.x, 141f), 2f);
+            LeanTween.move(rectTransform, new Vector3(positionX, positionUpY), 1f);
         }
     }
 }

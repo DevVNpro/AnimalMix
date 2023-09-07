@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 41198407}
   - component: {fileID: 41198406}
   - component: {fileID: 41198405}
+  - component: {fileID: 41198408}
   m_Layer: 8
   m_Name: Scroll View
   m_TagString: Untagged
@@ -381,7 +382,7 @@ MonoBehaviour:
   m_Content: {fileID: 1209928358}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 2
+  m_MovementType: 0
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -434,6 +435,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41198403}
   m_CullTransparentMesh: 1
+--- !u!114 &41198408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41198403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67a810bdbe7ff04c8ba2bf6a540ea8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scollTranform: {fileID: 1209928358}
+  periosPage: {fileID: 1346032371}
+  nextPage: {fileID: 819808196}
+  newPositonNext: {x: 0, y: 1244.2, z: 0}
+  newPositonPrerios: {x: 0, y: -1244.2, z: 0}
+  numberCardPage: 9
+  maxPage: 0
+  currentPage: 0
 --- !u!1 &179351144
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +958,6 @@ GameObject:
   - component: {fileID: 819808194}
   - component: {fileID: 819808198}
   - component: {fileID: 819808196}
-  - component: {fileID: 819808195}
   m_Layer: 8
   m_Name: ButtonRight
   m_TagString: Untagged
@@ -966,20 +986,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0000038146973}
   m_SizeDelta: {x: 199.4302, y: 218.2337}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &819808195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819808193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67a810bdbe7ff04c8ba2bf6a540ea8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scollTranform: {fileID: 1209928358}
-  newPositon: {x: 0, y: 1244.2, z: 0}
 --- !u!114 &819808196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,7 +1029,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1021079425}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 41198408}
+        m_TargetAssemblyTypeName: Projects.Script.SaveScripts.ManagePageCollection,
+          Assembly-CSharp
+        m_MethodName: NextPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &819808198
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1648,7 +1667,6 @@ GameObject:
   - component: {fileID: 1346032369}
   - component: {fileID: 1346032372}
   - component: {fileID: 1346032371}
-  - component: {fileID: 1346032370}
   m_Layer: 8
   m_Name: ButtonLeft
   m_TagString: Untagged
@@ -1677,20 +1695,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0000038146973}
   m_SizeDelta: {x: 199.4302, y: 218.2337}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1346032370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346032368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67a810bdbe7ff04c8ba2bf6a540ea8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scollTranform: {fileID: 1209928358}
-  newPositon: {x: 0, y: -1244.2, z: 0}
 --- !u!114 &1346032371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1734,7 +1738,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 554107607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 41198408}
+        m_TargetAssemblyTypeName: Projects.Script.SaveScripts.ManagePageCollection,
+          Assembly-CSharp
+        m_MethodName: PeriosPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1346032372
 CanvasRenderer:
   m_ObjectHideFlags: 0

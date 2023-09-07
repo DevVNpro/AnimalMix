@@ -14,6 +14,11 @@ namespace Projects.Script.PvP
         [SerializeField]
         public Button buttonEnemy3;  
         public Vector3 transformEnemy;
+
+        public void SettranformEnemy()
+        {
+            transformEnemy = Vector3.zero;
+        }
         public GameObject targetEnemy;
 
         void Awake()
