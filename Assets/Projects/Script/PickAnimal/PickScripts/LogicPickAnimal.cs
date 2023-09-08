@@ -9,41 +9,46 @@ using UnityEngine.UI;
 public class LogicPickAnimal : MonoBehaviour
 {
     [Header("Button Next")] 
-    [SerializeField] private Button _buttonClick;
-    [SerializeField]private Image _imageButton;
+    [SerializeField] private Button buttonClick;
+    [SerializeField]private Image imageButton;
 
     [Header("Class ShowUI")]
-    [SerializeField] private ShowImageClick _showUI;
+    [SerializeField] private ShowImageClick showUi;
 
     [Header("List Button")] [SerializeField]
-    private List<Button> _buttons;
+    private List<Button> buttons;
 
     [Header("Random List Button")] [SerializeField]
-    private RandomAnimal _randomButton;
+    private RandomAnimal randomButton;
 
     [Header("Partical System")] [SerializeField]
     private GameObject particalSystem;
 
-    [Header("ImgText")] [SerializeField] private Image _imageText;
+    [Header("ImgText")] [SerializeField] private Image imageText;
     
     
     [Header("BachgroundChange")]
     [SerializeField]
-    private GameObject BackgroundMom;
+    private GameObject backgroundMom;
     [SerializeField]
-    private GameObject FadeBackgroundMom;
+    private GameObject fadeBackgroundMom;
     [SerializeField]
-    private GameObject FadeBackgroundDad;
+    private GameObject fadeBackgroundDad;
     [SerializeField]
-    private GameObject BackgroundGen;
-    
+    private GameObject backgroundGen;
+
+    [Header("Button Top")] 
+    [SerializeField]
+    private GameObject leftButton;
+    [SerializeField]
+    private GameObject rightButton;
     
 
     private void Start()
     {
         transform.gameObject.SetActive(false);
-        _buttonClick = transform.GetComponent<Button>();
-        _buttonClick.onClick.AddListener(Even1);
+        buttonClick = transform.GetComponent<Button>();
+        buttonClick.onClick.AddListener(Even1);
     
 
 
@@ -56,38 +61,38 @@ public class LogicPickAnimal : MonoBehaviour
         SoundManager.Instance.PlayVfxMuSic("Next");
 
         //Save name Display
-        DataAnimal.Instance.SetNameData(_showUI.headText.text,_showUI.keyText.text);
+        DataAnimal.Instance.SetNameData(showUi.headText.text,showUi.keyText.text);
 
         //animation 
-        _showUI.MoveImgDad();
-        _showUI.SetImgMom();
+        showUi.MoveImgDad();
+        showUi.SetImgMom();
         
         //random Buton
-        _randomButton.RandomButton();
+        randomButton.RandomButton();
         
         //delete selected button
-        this.DeleteButton(_showUI.headText.text);
+        this.DeleteButton(showUi.headText.text);
         
         //change text
-        _showUI.ChangeHeadText("PICK A MOM");
+        showUi.ChangeHeadText("PICK A MOM");
         
         //delete button next
         transform.gameObject.SetActive(false);
         
         //change background
-        BackgroundMom.SetActive(true);
-        FadeBackgroundMom.SetActive(true);
-        FadeBackgroundDad.SetActive(false);
+        backgroundMom.SetActive(true);
+        fadeBackgroundMom.SetActive(true);
+        fadeBackgroundDad.SetActive(false);
 
         
         //add new Event
-        _buttonClick.onClick.RemoveListener(Even1);
-        _buttonClick.onClick.AddListener(Even2);
+        buttonClick.onClick.RemoveListener(Even1);
+        buttonClick.onClick.AddListener(Even2);
     }
 
     private void DeleteButton(string name)
     {
-        foreach (var button in _buttons)
+        foreach (var button in buttons)
         {
             if (button.gameObject.name == name)
             {
@@ -98,25 +103,25 @@ public class LogicPickAnimal : MonoBehaviour
 
     private void Even2()
     {
-        FadeBackgroundMom.SetActive(false);
-        BackgroundGen.SetActive(true);
+        fadeBackgroundMom.SetActive(false);
+        backgroundGen.SetActive(true);
         
         //addSoundVVFX
         SoundManager.Instance.PlayVfxMuSic("Next");
         
         //Save name Display
-        DataAnimal.Instance.SetNameData(_showUI.headText.text,_showUI.keyText.text);
+        DataAnimal.Instance.SetNameData(showUi.headText.text,showUi.keyText.text);
         
         //disable text
-        _imageText.enabled = false;
-        _showUI.headText.gameObject.SetActive(false);
+        imageText.enabled = false;
+        showUi.headText.gameObject.SetActive(false);
         
         //detele All Button
         this.DeActiveButton();
         
         //deactice
-        _buttonClick.enabled = false;
-        _imageButton.enabled = false;
+        buttonClick.enabled = false;
+        imageButton.enabled = false;
         
 
         //animation Generation
@@ -127,26 +132,30 @@ public class LogicPickAnimal : MonoBehaviour
 
     private void DeActiveButton()
     {
-        foreach (var button in _buttons)
+        foreach (var button in buttons)
         {
            button.gameObject.SetActive(false);
         }
     }
     IEnumerator AnimationGeneration()
     {
-        _showUI.imgDad.rectTransform.LeanMove(new Vector3(-241f, 241f),0.4f);
-        _showUI.imgMom.rectTransform.LeanMove(new Vector3(241f, 241f), 0.4f);
-        _showUI.imgDad.rectTransform.LeanScale(new Vector3(1f, 1f),0.4f);
+        //turn off button
+        leftButton.SetActive(false);
+        rightButton.SetActive(false);
+        
+        showUi.imgDad.rectTransform.LeanMove(new Vector3(-241f, 241f),0.4f);
+        showUi.imgMom.rectTransform.LeanMove(new Vector3(241f, 241f), 0.4f);
+        showUi.imgDad.rectTransform.LeanScale(new Vector3(1f, 1f),0.4f);
         yield return new WaitForSeconds(1.5f);
 
-        _showUI.imgDad.rectTransform.LeanMove(new Vector3(0f, 241f), 0.9f);
-        _showUI.imgMom.rectTransform.LeanMove(new Vector3(0f, 241f), 0.9f);
+        showUi.imgDad.rectTransform.LeanMove(new Vector3(0f, 241f), 0.9f);
+        showUi.imgMom.rectTransform.LeanMove(new Vector3(0f, 241f), 0.9f);
         yield return new WaitForSeconds(1f);
-        _showUI.imgDad.gameObject.SetActive((false));
-        _showUI.imgMom.gameObject.SetActive((false));
-        _showUI.headText.gameObject.SetActive(true);
-        _imageText.enabled = true;
-        _showUI.ChangeHeadText("GENERATING RESULT");
+        showUi.imgDad.gameObject.SetActive((false));
+        showUi.imgMom.gameObject.SetActive((false));
+        showUi.headText.gameObject.SetActive(true);
+        imageText.enabled = true;
+        showUi.ChangeHeadText("GENERATING RESULT");
         particalSystem.SetActive(true);
         //add Sound VFX
         SoundManager.Instance.PlayVfxMuSic("merge_loop");

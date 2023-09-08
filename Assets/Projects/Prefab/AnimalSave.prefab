@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 300}
+  m_SizeDelta: {x: 250, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3062413490795526569
 CanvasRenderer:
@@ -370,9 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 8001253751443180582}
-  _gameObjectimg: {fileID: 0}
   _gameObjecttext: {fileID: 0}
-  _text: {fileID: 0}
 --- !u!1 &8951932524109543159
 GameObject:
   m_ObjectHideFlags: 0

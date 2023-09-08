@@ -26,7 +26,7 @@ public class DataAnimal : MonoBehaviour
     {
         if (instance != null)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
         instance = this;

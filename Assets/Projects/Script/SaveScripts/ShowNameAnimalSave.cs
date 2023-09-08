@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Projects.Script.Manager;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,6 @@ public class ShowNameAnimalSave : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private GameObject _gameObjecttext;
-    [SerializeField] private Text _text;
 
     void Start()
     {
@@ -20,7 +20,6 @@ public class ShowNameAnimalSave : MonoBehaviour
 
         //get text
         _gameObjecttext = GameObject.FindGameObjectWithTag("text");
-        _text = _gameObjecttext.GetComponent<Text>();
 
     }
 
@@ -32,7 +31,7 @@ public class ShowNameAnimalSave : MonoBehaviour
 
     private void SetText()
     {
-        _text.text = _button.name;
+        _gameObjecttext.GetComponent<TextMeshProUGUI>().text = _button.name;
         
     }
     private void AddSoundVfx()

@@ -2512,10 +2512,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e932d6a7a037643b1fb61cc6d64271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttonClick: {fileID: 0}
-  _imageButton: {fileID: 727957980}
-  _showUI: {fileID: 1360858469}
-  _buttons:
+  buttonClick: {fileID: 0}
+  imageButton: {fileID: 727957980}
+  showUi: {fileID: 1360858469}
+  buttons:
   - {fileID: 1360858466}
   - {fileID: 1632662775}
   - {fileID: 345267703}
@@ -2530,13 +2530,15 @@ MonoBehaviour:
   - {fileID: 982631585}
   - {fileID: 1557736442}
   - {fileID: 1373968368}
-  _randomButton: {fileID: 935856300}
+  randomButton: {fileID: 935856300}
   particalSystem: {fileID: 1301484766}
-  _imageText: {fileID: 203134943}
-  BackgroundMom: {fileID: 1367182448}
-  FadeBackgroundMom: {fileID: 2081376529}
-  FadeBackgroundDad: {fileID: 1282995895}
-  BackgroundGen: {fileID: 1336411513}
+  imageText: {fileID: 203134943}
+  backgroundMom: {fileID: 1367182448}
+  fadeBackgroundMom: {fileID: 2081376529}
+  fadeBackgroundDad: {fileID: 1282995895}
+  backgroundGen: {fileID: 1336411513}
+  leftButton: {fileID: 79180779}
+  rightButton: {fileID: 128510595}
 --- !u!1 &754818021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3454,7 +3456,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1188930288}
   m_HandleRect: {fileID: 1188930287}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10640,7 +10642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50.909996, y: 0}
+  m_AnchoredPosition: {x: -0.000038146973, y: 0}
   m_SizeDelta: {x: -50.91, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1339951185
@@ -10670,7 +10672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 100
     m_Right: 40
     m_Top: 40
     m_Bottom: 0
@@ -14135,7 +14137,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: f7c100d6dc4154e4fbff56e773f1232d, type: 3}
     m_FontSize: 80
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100

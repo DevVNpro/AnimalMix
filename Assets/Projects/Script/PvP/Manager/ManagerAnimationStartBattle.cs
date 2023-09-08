@@ -29,7 +29,6 @@ namespace Projects.Script.PvP
         [SerializeField] private GameObject playerTurn;
         
         [Header("ButtonFight")]
-      //  [SerializeField] private Button buttonFight;
         [SerializeField] private Image imageButton;
         
         [Header("TeamGrid")]
@@ -47,9 +46,6 @@ namespace Projects.Script.PvP
         [Header("AnimationImgEnemy")] 
         [SerializeField] private List<RectTransform> enemys;
 
-     /*   [Header("Animation Text")]
-        [SerializeField] private Animator teamText;*/
-
         [Header("Tutorial Attack")] [SerializeField]
         private GameObject tutorrialAttack;
 
@@ -57,6 +53,11 @@ namespace Projects.Script.PvP
         private GameObject textLoading;
 
         [Header("List Slot")] [SerializeField] private List<GameObject> slotTeam;
+
+        [Header("ButtonTop")]
+        [SerializeField] private GameObject leftButton;
+        [SerializeField] private GameObject rightButton;
+
 
         private void Start()
         {
@@ -143,6 +144,8 @@ namespace Projects.Script.PvP
 
         private void Animation1()
         {
+            leftButton.SetActive(false);
+            rightButton.SetActive(false);
             ButtonNextPageRight.SetActive(false);
             ButtonNextPageLeft.SetActive(false);
             backgroundDeck.SetActive(false);

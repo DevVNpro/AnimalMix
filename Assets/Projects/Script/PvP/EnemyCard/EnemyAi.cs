@@ -55,7 +55,7 @@ namespace Projects.Script.PvP.EnemyCard
             yield return new WaitForSeconds(1f);
             
             //re-enable the player's damage condition, so as not to confuse damage when the player attacks or the enemy attacks
-            AttackEnemy.IsPlayerTurn = true;
+            PlayerAttack.isPlayerTurn = true;
             enemyTurn.SetActive(false);
             playerTurn.SetActive(true);
             BlockSpam.blockSpam.SetActive(false);

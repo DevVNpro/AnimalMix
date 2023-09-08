@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Projects.Script.GenAnimal.GenScripts;
 using Projects.Script.GenScripts;
+using Projects.Script.ManagerGame;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;

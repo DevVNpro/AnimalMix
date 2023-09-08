@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
-using Sirenix.OdinInspector;
-using UnityEngine.UI;
-namespace Projects.Script.ScripableObject.GenAnimal
+
+namespace Projects.Script.ManagerGame
 {
     
     [Serializable]

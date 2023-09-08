@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using Projects.Script.ManagerGame;
 using UnityEngine;
 using  UnityEngine.UI;
 

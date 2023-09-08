@@ -16,7 +16,7 @@ public class SceneControl : MonoBehaviour
     {
         if (instance != null)
         {
-            Destroy(this);
+            Destroy(gameObject);
             return;
         }
 

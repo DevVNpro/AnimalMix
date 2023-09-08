@@ -1,6 +1,7 @@
 using Projects.Script.ScripableObject.GenAnimal;
 using System.Collections;
 using System.Collections.Generic;
+using Projects.Script.ManagerGame;
 using UnityEngine;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;

@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using Projects.Script.ManagerGame;
+
 namespace Projects.Script.SaveScripts
 {
     public class LoadAnimalSave : MonoBehaviour

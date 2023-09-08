@@ -130,7 +130,7 @@ namespace Projects.Script.PvP.PlayerScript
             playerTurn.SetActive(false);
             enemyTurn.SetActive(true);
             yield return  new WaitForSeconds(2f);
-            AttackPlayer.IsEnemeTurn = true;
+            Enemyattack.isEnemeTurn = true;
   
             foreach (Transform slot in EnemyCards)
             {

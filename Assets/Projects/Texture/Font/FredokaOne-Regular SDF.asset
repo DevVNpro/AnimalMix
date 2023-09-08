@@ -566,7 +566,7 @@ Material:
     - _DistortTexXSpeed: 5
     - _DistortTexYSpeed: 5
     - _EditorDrawers: 6
-    - _FaceDilate: 0
+    - _FaceDilate: -0.152
     - _FaceShininess: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
@@ -646,7 +646,7 @@ Material:
     - _OutlineTexYSpeed: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.241
     - _OverlayBlend: 1
     - _OverlayGlow: 1
     - _PerspectiveFilter: 0.875
@@ -662,8 +662,8 @@ Material:
     - _RoundWaveSpeed: 2
     - _RoundWaveStrength: 0.7
     - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.6770833
+    - _ScaleRatioB: 0.80375
+    - _ScaleRatioC: 0.80375
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
