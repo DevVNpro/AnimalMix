@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: fdcc4681874d78247a0e23ddedf9098c
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a2d229f9eb1a5334097186a4f099cc9a
   - enabled: 1
@@ -26,8 +29,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PVP.unity
     guid: 7ca2461217bbff445be634f461f3b54e
-  - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
-    guid: fdcc4681874d78247a0e23ddedf9098c
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f9651eb09dc5ae843b93fb8646a818f3, type: 2}

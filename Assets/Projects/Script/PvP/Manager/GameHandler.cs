@@ -55,7 +55,7 @@ namespace Projects.Script.PvP
         }
         IEnumerator TurnOnWinImg()
         {
-            yield return  new WaitForSeconds(3f);
+            yield return  new WaitForSeconds(5f);
             textBattlePlayer.SetActive(false);
             textBattleEnemy.SetActive(false);
             enemyTeam.gameObject.SetActive(false);
@@ -71,7 +71,7 @@ namespace Projects.Script.PvP
         }
         IEnumerator TurnOnLoseImg()
         {
-            yield return  new WaitForSeconds(4f);
+            yield return  new WaitForSeconds(5f);
             textBattlePlayer.SetActive(false);
             textBattleEnemy.SetActive(false);
             dectTeam.gameObject.SetActive(false);

@@ -9,6 +9,6 @@ public class ManagerButtonSave : MonoBehaviour
     public void BackMenu()
     {
         SoundManager.Instance.PlayVfxMuSic("Click");
-        SceneControl.Instance.LoadScene(0);
+        SceneControl.Instance.LoadScene(1);
     }
 }

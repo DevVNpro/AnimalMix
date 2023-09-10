@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
@@ -22,17 +22,23 @@ namespace Projects.Script.MenuScripts
           string jsonSave = JsonConvert.SerializeObject(a);
           File.WriteAllText(path, jsonSave);
           Debug.Log(File.ReadAllText(path));*/
-          
-          string jsonConten = File.ReadAllText(path);
-            if (jsonConten != "")
+           
+            if (File.Exists(path))
             {
+                Debug.Log("1");
                 LoadDataSave1(ref SaveManager.Instance.animalDataList);
-                Debug.Log(" co du lieu");
+
 
             }
             else
             {
-                Debug.Log("Khong co du lieu");
+                Debug.Log("2");
+                SaveManager.Instance.AddNewAnimal("DOGCAT", "AB", "AB", 100);
+                string jsonSave = JsonConvert.SerializeObject(SaveManager.Instance.animalDataList);
+                using FileStream stream = File.Create(path);
+                stream.Close();
+                File.WriteAllText(path, jsonSave);
+
             }
 
         }

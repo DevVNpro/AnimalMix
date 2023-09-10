@@ -19,7 +19,7 @@ namespace Projects.Script.GenScripts
         {
             SoundManager.Instance.PlayVfxMuSic("Next");
             DataAnimal.Instance.DeleteNamedata();
-            SceneControl.Instance.LoadScene(5);
+            SceneControl.Instance.LoadScene(6);
         }
         
         
@@ -28,7 +28,7 @@ namespace Projects.Script.GenScripts
         {
             SoundManager.Instance.PlayVfxMuSic("Next");
             DataAnimal.Instance.DeleteNamedata();
-           SceneControl.Instance.BackScene();
+            SceneControl.Instance.LoadScene(2);
         }
 
         public void BackMenuClick()

@@ -31,19 +31,19 @@ namespace Projects.Script.Menu
         public void LoadScenePVP()
         {
             SoundManager.Instance.PlayVfxMuSic("Next");
-            SceneControl.Instance.LoadScene(5);
+            SceneControl.Instance.LoadScene(6);
         }
 
         public void NextScene()
         {
             SoundManager.Instance.PlayVfxMuSic("Next");
-            SceneControl.Instance.LoadNextScene();
+            SceneControl.Instance.LoadScene(2);
         }
 
         public void SaveScene()
         {
             SoundManager.Instance.PlayVfxMuSic("Next");
-            SceneControl.Instance.LoadScene(3);
+            SceneControl.Instance.LoadScene(4);
         }
 
         public void OpenPopUpBlockAds()

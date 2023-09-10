@@ -42,7 +42,6 @@ namespace Projects.Script.PvP.EnemyCard
 
         IEnumerator AttackPlayer(Transform slot)
         {
-            yield return new WaitForSeconds(2f);
             //attack player with no damage
             Transform parentAfterDrag = transform.parent;
             transform.SetParent(transform.root);
@@ -53,8 +52,9 @@ namespace Projects.Script.PvP.EnemyCard
             transform.LeanMove(new Vector3(_transform.position.x, _transform.position.y), 1f);
             transform.SetParent(parentAfterDrag);
             yield return new WaitForSeconds(1f);
-            
+
             //re-enable the player's damage condition, so as not to confuse damage when the player attacks or the enemy attacks
+            yield return new WaitForSeconds(2f);
             PlayerAttack.isPlayerTurn = true;
             enemyTurn.SetActive(false);
             playerTurn.SetActive(true);

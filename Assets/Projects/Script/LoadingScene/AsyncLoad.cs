@@ -11,7 +11,7 @@ public class AsyncLoad : MonoBehaviour
     [SerializeField] private Slider sliderLoading;
     void Start()
     {
-        StartCoroutine(Loading(0));
+        StartCoroutine(Loading(1));
     }
 
     IEnumerator Loading(int index)

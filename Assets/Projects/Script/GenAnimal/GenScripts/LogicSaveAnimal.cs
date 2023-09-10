@@ -43,7 +43,7 @@ namespace Projects.Script.GenScripts
                 SaveToJsonWithContent(SaveManager.Instance.animalDataList);
                 DataAnimal.Instance.DeleteNamedata();
             }
-            else
+        /*    else
             {
                 SaveManager.Instance.AddNewAnimal(DataAnimal.Instance._nameData, DataAnimal.Instance._keyData,DataAnimal.Instance._keyData,SetAttackAnimal.attack);
                 _button.image.color = Color.grey;
@@ -51,7 +51,7 @@ namespace Projects.Script.GenScripts
                 SaveToJsonWithContent(SaveManager.Instance.animalDataList);
                 DataAnimal.Instance.DeleteNamedata();
 
-            }
+            }*/
         }
 
         public void SaveToJsonWithContent(List<AnimalSaveData>  listAnimal)

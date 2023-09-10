@@ -14,13 +14,13 @@ public class ButtonManagerPvp : MonoBehaviour
     public void ResetBattle()
     {
         SoundManager.Instance.PlayVfxMuSic("Next");
-        SceneControl.Instance.LoadScene(5);
+        SceneControl.Instance.LoadScene(6);
     }
 
     public void CreateAnimal()
     {
         SoundManager.Instance.PlayVfxMuSic("Next");
-        SceneControl.Instance.LoadScene(1);
+        SceneControl.Instance.LoadScene(2);
     }
 
     public void LoadMenu()
@@ -30,7 +30,7 @@ public class ButtonManagerPvp : MonoBehaviour
         {
         SoundManager.Instance.PlayThemeMuSic("TheMagic1");
         }
-        SceneControl.Instance.LoadScene(0);
+        SceneControl.Instance.LoadScene(1);
     }
 
     public void OpenSetting()

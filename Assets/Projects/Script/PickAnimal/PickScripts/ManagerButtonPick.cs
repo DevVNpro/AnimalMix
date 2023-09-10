@@ -12,7 +12,7 @@ namespace Projects.Script.PickAnimal.PickScripts
         {
             DataAnimal.Instance.DeleteNamedata();
             SoundManager.Instance.PlayVfxMuSic("Next");
-            SceneControl.Instance.LoadScene(0);
+            SceneControl.Instance.LoadScene(1);
         }
 
         public void OpenSetting()
