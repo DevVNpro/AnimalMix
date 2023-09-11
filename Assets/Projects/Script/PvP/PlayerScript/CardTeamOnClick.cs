@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 namespace Projects.Script.PvP.PlayerScript
 {
-    public class CardOnClick : MonoBehaviour
+    public class CardTeamOnClick : MonoBehaviour
     {
         [Header("ButtonEnemy")] 
         [SerializeField]
@@ -86,7 +86,7 @@ namespace Projects.Script.PvP.PlayerScript
                 transformButton = Slot1.GetComponentInChildren<Button>().transform;
                 blockSpam.SetActive(true);
                 StartCoroutine(SetMoveAttack(transformButton));
-                positionEnemyClick.SettranformEnemy();
+                positionEnemyClick.SetNullTranformEnemy();
 
             }
            
@@ -99,7 +99,7 @@ namespace Projects.Script.PvP.PlayerScript
                 transformButton = Slot2.GetComponentInChildren<Button>().transform;
                 blockSpam.SetActive(true);
                 StartCoroutine(SetMoveAttack(transformButton));
-                positionEnemyClick.SettranformEnemy();
+                positionEnemyClick.SetNullTranformEnemy();
             }
            
         }
@@ -111,7 +111,7 @@ namespace Projects.Script.PvP.PlayerScript
                 transformButton = Slot3.GetComponentInChildren<Button>().transform;
                 blockSpam.SetActive(true);
                 StartCoroutine(SetMoveAttack(transformButton));
-                positionEnemyClick.SettranformEnemy();
+                positionEnemyClick.SetNullTranformEnemy();
             }
           
         }
@@ -129,11 +129,8 @@ namespace Projects.Script.PvP.PlayerScript
             isMoving = false;
             playerTurn.SetActive(false);
             enemyTurn.SetActive(true);
-            yield return  new WaitForSeconds(2f);
             Enemyattack.isEnemeTurn = true;
             yield return  new WaitForSeconds(4f);
-
-  
             foreach (Transform slot in EnemyCards)
             {
                     if (slot.childCount > 0)

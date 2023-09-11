@@ -15,7 +15,7 @@ namespace Projects.Script.PvP
         public Button buttonEnemy3;  
         public Vector3 transformEnemy;
 
-        public void SettranformEnemy()
+        public void SetNullTranformEnemy()
         {
             transformEnemy = Vector3.zero;
         }

@@ -41,7 +41,7 @@ namespace Projects.Script.PvP
         [SerializeField] private Image EnemyGrid;
 
         [Header("ActiveOnClickSlot")]
-        [SerializeField] private CardOnClick _cardOnClick;
+        [SerializeField] private CardTeamOnClick cardTeamOnClick;
 
         [Header("AnimationImgEnemy")] 
         [SerializeField] private List<RectTransform> enemys;
@@ -59,7 +59,7 @@ namespace Projects.Script.PvP
         [SerializeField] private GameObject rightButton;
 
 
-        private void Start()
+        private void OnEnable()
         {
             StartCoroutine(AnimationButton());
         }
@@ -117,7 +117,7 @@ namespace Projects.Script.PvP
             playerTurn.SetActive(true);
             tutorrialAttack.SetActive(true); 
            //cardOnClick.SetActive(true);
-           _cardOnClick.enabled = true;
+           cardTeamOnClick.enabled = true;
 
         }
 

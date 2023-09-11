@@ -10,14 +10,8 @@ namespace Projects.Script.PvP.EnemyCard
     {
         public Transform[] cardSlots;
         private Transform _transform;
-
-        [Header("Animation Text")] [SerializeField]
-        private Animator teamText;
-        [Header("Animation Text")] [SerializeField]
-        private Animator enemyText;
-
         [Header("BlockSpam")] 
-        [SerializeField] private CardOnClick BlockSpam;
+        [SerializeField] private CardTeamOnClick BlockSpam;
         private void Start()
         {
             _transform = this.transform;

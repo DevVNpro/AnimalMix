@@ -35,7 +35,7 @@ namespace Projects.Script.GenScripts
         {
             SoundManager.Instance.PlayVfxMuSic("Next");
             DataAnimal.Instance.DeleteNamedata();
-            SceneControl.Instance.MenuScene();
+            SceneControl.Instance.LoadScene(1);
         }
 
         public void OpenSetting()

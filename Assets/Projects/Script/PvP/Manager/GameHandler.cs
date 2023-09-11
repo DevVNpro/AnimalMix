@@ -33,6 +33,11 @@ namespace Projects.Script.PvP
         [SerializeField] private RectTransform backgroundEnemyWin;
         [SerializeField] private RectTransform yellowPattern;
 
+        [Header("partical System")]
+        [SerializeField]private GameObject particalLeft;
+        [SerializeField]private GameObject particaRight;
+        
+
         bool endGame = false;
 
 
@@ -68,6 +73,9 @@ namespace Projects.Script.PvP
             imageWin.transform.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             yield return new WaitForSeconds(0.3f);
             SoundManager.Instance.PlayVfxMuSic("Win");
+            yield return  new WaitForSeconds(1f);
+            particalLeft.SetActive(true);
+            particaRight.SetActive(true);
         }
         IEnumerator TurnOnLoseImg()
         {

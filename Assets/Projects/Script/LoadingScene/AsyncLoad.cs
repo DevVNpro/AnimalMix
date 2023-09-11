@@ -16,6 +16,7 @@ public class AsyncLoad : MonoBehaviour
 
     IEnumerator Loading(int index)
     {
+        yield return  new WaitForSeconds(3f);
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(index);
         while (!loadOperation.isDone)
         {
