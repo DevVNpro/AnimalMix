@@ -87,7 +87,7 @@ public class ShowImageClick : MonoBehaviour
 
   private void EnableNextButton()
   {
-    _nextButton.gameObject.SetActive(true);
+        _nextButton.GetComponent<Image>().enabled = true;
   }
   
   //to chage display img when pick dad animal

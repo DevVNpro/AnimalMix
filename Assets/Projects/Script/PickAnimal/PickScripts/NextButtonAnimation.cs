@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LogicPickAnimal : MonoBehaviour
+public class NextButtonAnimation : MonoBehaviour
 {
     [Header("Button Next")] 
     [SerializeField] private Button buttonClick;
@@ -25,8 +25,7 @@ public class LogicPickAnimal : MonoBehaviour
     private GameObject particalSystem;
 
     [Header("ImgText")] [SerializeField] private Image imageText;
-    
-    
+ 
     [Header("BachgroundChange")]
     [SerializeField]
     private GameObject backgroundMom;
@@ -45,67 +44,49 @@ public class LogicPickAnimal : MonoBehaviour
 
     [Header("Scale Inout Content")] [SerializeField]
     private ScaleInOutContent scaleInOutContent;
+    [Header("BlockSpam")]
+    [SerializeField] private GameObject blockSpam;
     private void Start()
     {
-        transform.gameObject.SetActive(false);
         buttonClick = transform.GetComponent<Button>();
-        buttonClick.onClick.AddListener(() => StartCoroutine(Even1()));
+        buttonClick.onClick.AddListener(SetEven1);
+    }
+    public void SetEven1()
+    {
+        StartCoroutine(Even1());
     }
 
     IEnumerator Even1()
     {
-        //addSoundVVFX
-        SoundManager.Instance.PlayVfxMuSic("Next");
-        //Save name Display
+        //block spam
+        blockSpam.SetActive(true);
         DataAnimal.Instance.SetNameData(showUi.headText.text,showUi.keyText.text);
-        //animation 
-        showUi.MoveImgDad();
-        showUi.SetImgMom();
+        SoundManager.Instance.PlayVfxMuSic("Next");
         scaleInOutContent.ScaleOutContent();
-        yield return new WaitForSeconds(2f);
-        //random Buton
+        transform.GetComponent<Image>().enabled = false;
+        yield return new WaitForSeconds(1f);
+     
+        yield return new WaitForSeconds(0.5f);
+
         randomButton.RandomButton();
         //delete selected button
         this.DeleteButton(showUi.headText.text);
         scaleInOutContent.ScaleIntContent();
-        //change text
-        showUi.ChangeHeadText("PICK A MOM");
-        //delete button next
-        transform.gameObject.SetActive(false);
-        //change background
-        backgroundMom.SetActive(true);
-        fadeBackgroundMom.SetActive(true);
-        fadeBackgroundDad.SetActive(false);
-        //add new Event
-        buttonClick.onClick.AddListener(Even2);
-    }
-    /*private void Even11()
-    {
-        //addSoundVVFX
-        SoundManager.Instance.PlayVfxMuSic("Next");
-        //Save name Display
-        DataAnimal.Instance.SetNameData(showUi.headText.text,showUi.keyText.text);
-        //animation 
         showUi.MoveImgDad();
         showUi.SetImgMom();
-        scaleInOutContent.ScaleOutContent();
-        //random Buton
-        randomButton.RandomButton();
-        //delete selected button
-        this.DeleteButton(showUi.headText.text);
         //change text
         showUi.ChangeHeadText("PICK A MOM");
         //delete button next
-        transform.gameObject.SetActive(false);
         //change background
         backgroundMom.SetActive(true);
         fadeBackgroundMom.SetActive(true);
         fadeBackgroundDad.SetActive(false);
+        //block spam
+        blockSpam.SetActive(false);
         //add new Event
-        buttonClick.onClick.RemoveListener(Even1);
-        buttonClick.onClick.AddListener(Even2);
-    }*/
-
+        buttonClick.onClick.RemoveListener(SetEven1);
+        buttonClick.onClick.AddListener(StartEven2);
+    }
     private void DeleteButton(string name)
     {
         foreach (var button in buttons)
@@ -117,39 +98,38 @@ public class LogicPickAnimal : MonoBehaviour
         }
     }
 
-    private void Even2()
+    private void StartEven2()
     {
+        StartCoroutine(Even2());
+    }
+    IEnumerator Even2()
+    {
+        blockSpam.SetActive(true);
+        scaleInOutContent.ScaleOutContent();
+        transform.GetComponent<Image>().enabled = false;
+        yield return new WaitForSeconds(1.5f);
         fadeBackgroundMom.SetActive(false);
         backgroundGen.SetActive(true);
-        
+
         //addSoundVVFX
         SoundManager.Instance.PlayVfxMuSic("Next");
-        
+
         //Save name Display
-        DataAnimal.Instance.SetNameData(showUi.headText.text,showUi.keyText.text);
-        
+        DataAnimal.Instance.SetNameData(showUi.headText.text, showUi.keyText.text);
+
         //disable text
         imageText.enabled = false;
         showUi.headText.gameObject.SetActive(false);
-        
-        //detele All Button
-        this.DeActiveButton();
-        
+
         //deactice
         buttonClick.enabled = false;
         imageButton.enabled = false;
-        
+
 
         //animation Generation
         StartCoroutine(AnimationGeneration());
     }
-    private void DeActiveButton()
-    {
-        foreach (var button in buttons)
-        {
-           button.gameObject.SetActive(false);
-        }
-    }
+   
     IEnumerator AnimationGeneration()
     {
         //turn off button

@@ -30,7 +30,7 @@ public class ScaleInOutContent : MonoBehaviour
    IEnumerator StartScaleOut()
    {
       foreach (Transform transform in gameObjects)
-      {      Debug.Log("1");
+      {      
          transform.gameObject.GetComponent<Animator>().enabled = false;
          transform.gameObject.LeanScale(new Vector3(0f, 0f, 0f), 0.1f);
          yield return  new WaitForSeconds(0.1f);
