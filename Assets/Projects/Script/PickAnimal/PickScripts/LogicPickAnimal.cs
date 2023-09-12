@@ -42,53 +42,69 @@ public class LogicPickAnimal : MonoBehaviour
     private GameObject leftButton;
     [SerializeField]
     private GameObject rightButton;
-    
 
+    [Header("Scale Inout Content")] [SerializeField]
+    private ScaleInOutContent scaleInOutContent;
     private void Start()
     {
         transform.gameObject.SetActive(false);
         buttonClick = transform.GetComponent<Button>();
-        buttonClick.onClick.AddListener(Even1);
-    
-
-
-
+        buttonClick.onClick.AddListener(() => StartCoroutine(Even1()));
     }
 
-    private void Even1()
+    IEnumerator Even1()
     {
         //addSoundVVFX
         SoundManager.Instance.PlayVfxMuSic("Next");
-
         //Save name Display
         DataAnimal.Instance.SetNameData(showUi.headText.text,showUi.keyText.text);
-
         //animation 
         showUi.MoveImgDad();
         showUi.SetImgMom();
-        
+        scaleInOutContent.ScaleOutContent();
+        yield return new WaitForSeconds(2f);
         //random Buton
         randomButton.RandomButton();
-        
         //delete selected button
         this.DeleteButton(showUi.headText.text);
-        
+        scaleInOutContent.ScaleIntContent();
         //change text
         showUi.ChangeHeadText("PICK A MOM");
-        
         //delete button next
         transform.gameObject.SetActive(false);
-        
         //change background
         backgroundMom.SetActive(true);
         fadeBackgroundMom.SetActive(true);
         fadeBackgroundDad.SetActive(false);
-
-        
+        //add new Event
+        buttonClick.onClick.AddListener(Even2);
+    }
+    /*private void Even11()
+    {
+        //addSoundVVFX
+        SoundManager.Instance.PlayVfxMuSic("Next");
+        //Save name Display
+        DataAnimal.Instance.SetNameData(showUi.headText.text,showUi.keyText.text);
+        //animation 
+        showUi.MoveImgDad();
+        showUi.SetImgMom();
+        scaleInOutContent.ScaleOutContent();
+        //random Buton
+        randomButton.RandomButton();
+        //delete selected button
+        this.DeleteButton(showUi.headText.text);
+        //change text
+        showUi.ChangeHeadText("PICK A MOM");
+        //delete button next
+        transform.gameObject.SetActive(false);
+        //change background
+        backgroundMom.SetActive(true);
+        fadeBackgroundMom.SetActive(true);
+        fadeBackgroundDad.SetActive(false);
         //add new Event
         buttonClick.onClick.RemoveListener(Even1);
         buttonClick.onClick.AddListener(Even2);
-    }
+    }*/
 
     private void DeleteButton(string name)
     {
@@ -126,10 +142,7 @@ public class LogicPickAnimal : MonoBehaviour
 
         //animation Generation
         StartCoroutine(AnimationGeneration());
-
-
     }
-
     private void DeActiveButton()
     {
         foreach (var button in buttons)
