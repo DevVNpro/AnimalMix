@@ -32,7 +32,7 @@ public class ScaleInOutContent : MonoBehaviour
       foreach (Transform transform in gameObjects)
       {      
          transform.gameObject.GetComponent<Animator>().enabled = false;
-         transform.gameObject.LeanScale(new Vector3(0f, 0f, 0f), 0.1f);
+         transform.gameObject.LeanScale(new Vector3(0f, 0f, 0f), 0.1f).setEaseLinear();
          yield return  new WaitForSeconds(0.1f);
       }
       
@@ -48,8 +48,9 @@ public class ScaleInOutContent : MonoBehaviour
       rectTransformContent.anchoredPosition = new Vector3(0f,0f,0f);
       foreach (Transform transform in gameObjects)
       {
-        LeanTween.scale(transform.gameObject, new Vector3(1f, 1f, 1f), 0.1f);
-         yield return  new WaitForSeconds(0.1f);
+        LeanTween.scale(transform.gameObject, new Vector3(1f, 1f, 1f), 0.1f).setEaseLinear();
+        transform.gameObject.GetComponent<Animator>().enabled = true;
+        yield return  new WaitForSeconds(0.1f);
       }
       
    }

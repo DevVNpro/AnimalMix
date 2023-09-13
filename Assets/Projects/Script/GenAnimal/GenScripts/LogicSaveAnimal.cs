@@ -17,14 +17,17 @@ namespace Projects.Script.GenScripts
         private Button _button;
 
         [Header("HeadText")] [SerializeField] private Text _text;
-   
-  
+
+        [Header("Tutorial")] [SerializeField] private GameObject tutorialSave;
+
+
         public void SaveData()
         {
             Debug.Log("SaveWithContent");
             string path = Application.persistentDataPath + "AnimalJsonSave.json";
             if (File.Exists(path))
             {
+                tutorialSave.SetActive(false);
                 foreach (AnimalSaveData animmal in SaveManager.Instance.animalDataList)
                 {
                     if (animmal.key == DataAnimal.Instance._keyData)
@@ -43,17 +46,7 @@ namespace Projects.Script.GenScripts
                 SaveToJsonWithContent(SaveManager.Instance.animalDataList);
                 DataAnimal.Instance.DeleteNamedata();
             }
-        /*    else
-            {
-                SaveManager.Instance.AddNewAnimal(DataAnimal.Instance._nameData, DataAnimal.Instance._keyData,DataAnimal.Instance._keyData,SetAttackAnimal.attack);
-                _button.image.color = Color.grey;
-                _button.enabled = false;
-                SaveToJsonWithContent(SaveManager.Instance.animalDataList);
-                DataAnimal.Instance.DeleteNamedata();
-
-            }*/
         }
-
         public void SaveToJsonWithContent(List<AnimalSaveData>  listAnimal)
         {
             Debug.Log("SaveWithContent");

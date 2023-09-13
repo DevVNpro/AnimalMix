@@ -31,15 +31,15 @@ public class TutorialAttack : MonoBehaviour
         while (true)
         {
             yield return  new WaitForSeconds(0.5f);
-            image.transform.LeanScale(new Vector3(0.7f, 0.7f), 0.6f);
+            image.transform.LeanScale(new Vector3(0.2f, 0.2f), 0.6f);
             yield return  new WaitForSeconds(0.7f);
-            image.transform.LeanScale(new Vector3(1f, 1f), 0.6f);
+            image.transform.LeanScale(new Vector3(0.3f, 0.3f), 0.6f);
             yield return  new WaitForSeconds(0.7f);
             image.rectTransform.LeanMove(new Vector3(20f,-550f), 0.6f);
             yield return  new WaitForSeconds(0.7f);
-            image.transform.LeanScale(new Vector3(0.7f, 0.7f), 0.6f);
+            image.transform.LeanScale(new Vector3(0.2f, 0.2f), 0.6f);
             yield return  new WaitForSeconds(0.7f);
-            image.transform.LeanScale(new Vector3(1f, 1f), 0.6f);
+            image.transform.LeanScale(new Vector3(0.3f, 0.3f), 0.6f);
             yield return  new WaitForSeconds(0.7f);
 
 

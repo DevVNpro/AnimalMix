@@ -11,7 +11,7 @@ namespace Projects.Script.PvP.EnemyCard
         public Transform[] cardSlots;
         private Transform _transform;
         [Header("BlockSpam")] 
-        [SerializeField] private CardTeamOnClick BlockSpam;
+        [SerializeField] private GameObject blockSpam;
         private void Start()
         {
             _transform = this.transform;
@@ -36,10 +36,12 @@ namespace Projects.Script.PvP.EnemyCard
 
         IEnumerator AttackPlayer(Transform slot)
         {
+            Enemyattack.isEnemeTurn = true;
             //attack player with no damage
             Transform parentAfterDrag = transform.parent;
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
+            Debug.Log(Enemyattack.isEnemeTurn);
             transform.LeanMove(new Vector3(slot.position.x, slot.position.y), 1.7f).setEasePunch();
             SoundManager.Instance.PlayVfxMuSic("Attack1");
             yield return new WaitForSeconds(1.8f);
@@ -52,7 +54,7 @@ namespace Projects.Script.PvP.EnemyCard
             PlayerAttack.isPlayerTurn = true;
             enemyTurn.SetActive(false);
             playerTurn.SetActive(true);
-            BlockSpam.blockSpam.SetActive(false);
+            blockSpam.SetActive(false);
         }
        
     } 

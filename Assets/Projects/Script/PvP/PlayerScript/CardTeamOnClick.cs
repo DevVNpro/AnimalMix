@@ -118,18 +118,22 @@ namespace Projects.Script.PvP.PlayerScript
         IEnumerator SetMoveAttack(Transform transformButton)
         {
             isMoving = true;
+            //Set lastCanvas
             Transform parentAfterDrag= transformButton.parent;
             transformButton.SetParent(transform.root);
             transformButton.SetAsLastSibling();
+            //move Player Position
             transformButton.transform.LeanMove(new Vector3(positionEnemyClick.transformEnemy.x, positionEnemyClick.transformEnemy.y), 1.7f).setEasePunch();
             SoundManager.Instance.PlayVfxMuSic("Attack");
             yield return  new WaitForSeconds(1.8f);
             transformButton.transform.LeanMove(new Vector3(transformButton.position.x, transformButton.position.y), 1f);
+            yield return  new WaitForSeconds(1f);
+            //return canvas position
             transformButton.SetParent(parentAfterDrag);
+            //block spam and animation background
             isMoving = false;
             playerTurn.SetActive(false);
             enemyTurn.SetActive(true);
-            Enemyattack.isEnemeTurn = true;
             yield return  new WaitForSeconds(4f);
             foreach (Transform slot in EnemyCards)
             {
