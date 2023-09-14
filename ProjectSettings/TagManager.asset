@@ -16,6 +16,7 @@ TagManager:
   - Player3
   - BackgroundCard
   - ImageCard
+  - Missile
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Particle
   - SecondCamera
   - UIGame
   - PopUp

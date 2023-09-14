@@ -92,11 +92,11 @@ namespace Projects.Script.PvP
             yield return new WaitForSeconds(1f);
             whiteTriangle.SetActive(true);
             Animation2();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
+            EnemyGrid.rectTransform.LeanScale(new Vector3(1f, 1f), 0.5f);
+            yield return new WaitForSeconds(0.5f);
             parrtenBlue.SetActive(true);
             parrtenYellow.SetActive(true);
-            yield return new WaitForSeconds(1f);
-            EnemyGrid.rectTransform.LeanScale(new Vector3(1f, 1f), 0.5f);
             
             
             //Animation enemt scale

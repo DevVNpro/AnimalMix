@@ -65,7 +65,7 @@ namespace Projects.Script.PvP
             dectTeam.gameObject.SetActive(false);
             whiteTriangle.SetActive(false);
             LeanTween.move(backgroundEnemy, new Vector3(backgroundEnemy.anchoredPosition.x, 0), 2.5f).setEaseLinear();
-            LeanTween.move(bluePattern, new Vector3(bluePattern.anchoredPosition.x, 1910f), 1f);
+            LeanTween.move(bluePattern, new Vector3(bluePattern.anchoredPosition.x, 1910f), 1.5f);
             yield return  new WaitForSeconds(2.3f);
             buttonWinLose.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             imageWin.transform.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
