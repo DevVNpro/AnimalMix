@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Projects.Script.PickAnimal.PickScripts
 {
-    public class NextButtonAnimation : MonoBehaviour
+    public class ManagerPickAnimation : MonoBehaviour
     {
         [Header("Button Next")] 
         [SerializeField] private Button buttonClick;
@@ -129,7 +129,7 @@ namespace Projects.Script.PickAnimal.PickScripts
             particalSystem.SetActive(true);
             //add Sound VFX
             SoundManager.Instance.PlayVfxMuSic("merge_loop");
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(4f);
             particalSystem.gameObject.LeanScale(new Vector3(0f, 0f), 0.8f);
             yield return new WaitForSeconds(0.8f);
             SoundManager.Instance.TurnOffVfxSound();

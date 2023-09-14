@@ -40,6 +40,9 @@ namespace Projects.Script.PvP.PlayerScript
          [SerializeField]
          private GameObject playerTurn;
 
+        [SerializeField]
+        private GetEnemyAttack getEnemyAttack;
+
         private void Start()
         {
             CheckListSlot();
@@ -75,9 +78,6 @@ namespace Projects.Script.PvP.PlayerScript
             
             
         }
-
-  
-
         public void OnClickCard1()
         {
 
@@ -135,16 +135,24 @@ namespace Projects.Script.PvP.PlayerScript
             playerTurn.SetActive(false);
             enemyTurn.SetActive(true);
             yield return  new WaitForSeconds(4f);
+            int cnt = 0;
             foreach (Transform slot in EnemyCards)
             {
                     if (slot.childCount > 0)
                     {
-                        slot.GetComponentInChildren<EnemyAi>().StartAttackLoop();
-                        break;
+                        cnt++;
+                        getEnemyAttack.AddEnemyToList(slot);
+                      //  slot.GetComponentInChildren<EnemyAi>().StartAttackLoop();
+                       // break;
                     }
             }
-            
+            if(cnt != 0)
+            {
 
+            getEnemyAttack.GetEnemyAttackMax().GetComponentInChildren<EnemyAi>().StartAttackLoop();
+            getEnemyAttack.NewListEnemy();
+
+            }
         }
        
 
