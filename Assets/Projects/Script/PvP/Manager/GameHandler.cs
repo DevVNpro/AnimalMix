@@ -46,16 +46,14 @@ namespace Projects.Script.PvP
         {
             if (!endGame)
             {
-            if (TotalAttack.sumAttack == 0)
-            {
+               if (TotalAttack.sumAttack == 0)
+               {
+                endGame = true; 
+                StartCoroutine(TurnOnLoseImg()); } 
+               if (TotalAttackEnemy.sumAttack == 0)
+               {
                 endGame = true;
-                StartCoroutine(TurnOnLoseImg());
-            }
-            if (TotalAttackEnemy.sumAttack == 0)
-            {
-                endGame = true;
-                StartCoroutine(TurnOnWinImg());
-            }
+                StartCoroutine(TurnOnWinImg()); }
             }
         }
         IEnumerator TurnOnWinImg()
@@ -66,8 +64,8 @@ namespace Projects.Script.PvP
             enemyTeam.gameObject.SetActive(false);
             dectTeam.gameObject.SetActive(false);
             whiteTriangle.SetActive(false);
-            LeanTween.move(backgroundEnemy, new Vector3(backgroundEnemy.anchoredPosition.x, 0), 3f).setEaseLinear();
-            LeanTween.move(bluePattern, new Vector3(bluePattern.anchoredPosition.x, 2000f), 1.5f);
+            LeanTween.move(backgroundEnemy, new Vector3(backgroundEnemy.anchoredPosition.x, 0), 2.5f).setEaseLinear();
+            LeanTween.move(bluePattern, new Vector3(bluePattern.anchoredPosition.x, 1910f), 1f);
             yield return  new WaitForSeconds(2.3f);
             buttonWinLose.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             imageWin.transform.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
@@ -85,8 +83,8 @@ namespace Projects.Script.PvP
             dectTeam.gameObject.SetActive(false);
             enemyTeam.gameObject.SetActive(false);
             whiteTriangle.SetActive(false);
-            LeanTween.move(backgroundEnemyWin, new Vector3(backgroundEnemyWin.anchoredPosition.x, 0), 2f);
-            LeanTween.move(yellowPattern, new Vector3(yellowPattern.anchoredPosition.x, 2100f), 2f);
+            LeanTween.move(backgroundEnemyWin, new Vector3(backgroundEnemyWin.anchoredPosition.x, 0), 2.5f).setEaseLinear();
+            LeanTween.move(yellowPattern, new Vector3(yellowPattern.anchoredPosition.x, 2013f), 1.5f);
             yield return  new WaitForSeconds(2.3f);   
             buttonWinLose.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             imageLose.transform.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);

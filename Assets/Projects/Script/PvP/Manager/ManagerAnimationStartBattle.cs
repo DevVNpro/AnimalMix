@@ -85,7 +85,7 @@ namespace Projects.Script.PvP
             SoundManager.Instance.PlayThemeMuSic("TheMagic2");
             RemoveDrabItem();
             Animation1();
-            yield return new WaitForSeconds(1.3f);
+            yield return new WaitForSeconds(0.6f);
             //move background battle
             LeanTween.move(backgroundBattleBlue, new Vector3(backgroundBattleBlue.anchoredPosition.x, -1800f), 2f);
              LeanTween.move(backgroundBattleYellow, new Vector3(backgroundBattleYellow.anchoredPosition.x, -1914f), 1f);
@@ -93,8 +93,8 @@ namespace Projects.Script.PvP
             whiteTriangle.SetActive(true);
             Animation2();
             yield return new WaitForSeconds(1f);
-            parrtenYellow.SetActive(true);
             parrtenBlue.SetActive(true);
+            parrtenYellow.SetActive(true);
             yield return new WaitForSeconds(1f);
             EnemyGrid.rectTransform.LeanScale(new Vector3(1f, 1f), 0.5f);
             
@@ -104,9 +104,9 @@ namespace Projects.Script.PvP
             foreach (RectTransform enemy in enemys)
             {
                 enemy.localScale = new Vector3(1,1,1);
-                LeanTween.move(enemy, new Vector3(enemy.anchoredPosition.x, -185f), 0.5f);
+                LeanTween.move(enemy, new Vector3(enemy.anchoredPosition.x, -185f), 0.8f);
                 SoundManager.Instance.PlayVfxMuSic("EnemyMove");
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.4f);
             }
             
             textLoading.SetActive(false);

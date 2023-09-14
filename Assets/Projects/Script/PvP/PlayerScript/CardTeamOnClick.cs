@@ -123,11 +123,11 @@ namespace Projects.Script.PvP.PlayerScript
             transformButton.SetParent(transform.root);
             transformButton.SetAsLastSibling();
             //move Player Position
-            transformButton.transform.LeanMove(new Vector3(positionEnemyClick.transformEnemy.x, positionEnemyClick.transformEnemy.y), 1.7f).setEasePunch();
+            transformButton.transform.LeanMove(new Vector3(positionEnemyClick.transformEnemy.x, positionEnemyClick.transformEnemy.y), 0.5f).setEase(LeanTweenType.easeInBack);
             SoundManager.Instance.PlayVfxMuSic("Attack");
-            yield return  new WaitForSeconds(1.8f);
-            transformButton.transform.LeanMove(new Vector3(transformButton.position.x, transformButton.position.y), 1f);
-            yield return  new WaitForSeconds(1f);
+            yield return  new WaitForSeconds(0.5f);
+            transformButton.transform.LeanMove(new Vector3(parentAfterDrag.position.x, parentAfterDrag.position.y), 0.5f).setEase(LeanTweenType.easeInQuad);
+            yield return  new WaitForSeconds(0.5f);
             //return canvas position
             transformButton.SetParent(parentAfterDrag);
             //block spam and animation background

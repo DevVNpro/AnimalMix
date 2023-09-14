@@ -1079,6 +1079,7 @@ GameObject:
   - component: {fileID: 345267706}
   - component: {fileID: 345267707}
   - component: {fileID: 345267708}
+  - component: {fileID: 345267709}
   m_Layer: 0
   m_Name: Lion
   m_TagString: Untagged
@@ -1243,6 +1244,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 4bbfdf5db77b23c4db67cbffe0cbbb0f, type: 2}
+--- !u!114 &345267709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345267701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &363076803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2616,8 +2630,7 @@ MonoBehaviour:
   backgroundGen: {fileID: 1336411513}
   leftButton: {fileID: 79180779}
   rightButton: {fileID: 128510595}
-  scaleInOutContent: {fileID: 1806685858}
-  blockSpam: {fileID: 379795923}
+  content: {fileID: 1339951184}
 --- !u!114 &727957983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2659,6 +2672,7 @@ GameObject:
   - component: {fileID: 754818026}
   - component: {fileID: 754818027}
   - component: {fileID: 754818028}
+  - component: {fileID: 754818029}
   m_Layer: 0
   m_Name: X
   m_TagString: Untagged
@@ -2823,6 +2837,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 333736b463c12064a848c6a6c5566f35, type: 2}
+--- !u!114 &754818029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754818021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &769876678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,6 +3033,7 @@ GameObject:
   - component: {fileID: 787470356}
   - component: {fileID: 787470357}
   - component: {fileID: 787470358}
+  - component: {fileID: 787470359}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Untagged
@@ -3170,6 +3198,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 9410d81429131f84485ae3bdcd55eb1f, type: 2}
+--- !u!114 &787470359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787470351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &794991065
 GameObject:
   m_ObjectHideFlags: 0
@@ -3981,6 +4022,7 @@ GameObject:
   - component: {fileID: 982631588}
   - component: {fileID: 982631589}
   - component: {fileID: 982631590}
+  - component: {fileID: 982631591}
   m_Layer: 0
   m_Name: G
   m_TagString: Untagged
@@ -4145,6 +4187,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: aff8ff7fdcb890f4da77ea9980e7539d, type: 2}
+--- !u!114 &982631591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982631583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &983392525
 GameObject:
   m_ObjectHideFlags: 0
@@ -4160,6 +4215,7 @@ GameObject:
   - component: {fileID: 983392530}
   - component: {fileID: 983392531}
   - component: {fileID: 983392532}
+  - component: {fileID: 983392533}
   m_Layer: 0
   m_Name: Dinosaur
   m_TagString: Untagged
@@ -4324,6 +4380,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 261134d5f232c93498fc085a3afe13cb, type: 2}
+--- !u!114 &983392533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983392525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &994314040
 GameObject:
   m_ObjectHideFlags: 0
@@ -4864,6 +4933,7 @@ GameObject:
   - component: {fileID: 1155568248}
   - component: {fileID: 1155568249}
   - component: {fileID: 1155568250}
+  - component: {fileID: 1155568251}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Untagged
@@ -5028,6 +5098,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: fee5ab45f13bad443ba4d5f9d1539d9b, type: 2}
+--- !u!114 &1155568251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155568243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1178660305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5494,6 +5577,7 @@ GameObject:
   - component: {fileID: 1276231759}
   - component: {fileID: 1276231760}
   - component: {fileID: 1276231761}
+  - component: {fileID: 1276231762}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -5658,6 +5742,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 3978f4ab2eb01594f8ca66d22c4a3583, type: 2}
+--- !u!114 &1276231762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276231754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1282995895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5693,7 +5790,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 21}
+  m_AnchoredPosition: {x: 0, y: -1.9999695}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282995897
@@ -10803,6 +10900,7 @@ GameObject:
   - component: {fileID: 1360858469}
   - component: {fileID: 1360858470}
   - component: {fileID: 1360858471}
+  - component: {fileID: 1360858472}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -10967,6 +11065,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 1495f92b6ee87a44b9c7a9f0edbf393f, type: 2}
+--- !u!114 &1360858472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360858464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1365898649
 GameObject:
   m_ObjectHideFlags: 0
@@ -11196,6 +11307,7 @@ GameObject:
   - component: {fileID: 1373968371}
   - component: {fileID: 1373968372}
   - component: {fileID: 1373968373}
+  - component: {fileID: 1373968374}
   m_Layer: 0
   m_Name: Headsets
   m_TagString: Untagged
@@ -11360,6 +11472,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 3af991d4c13c1a349a5c6c19a483508b, type: 2}
+--- !u!114 &1373968374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373968366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1429651062
 GameObject:
   m_ObjectHideFlags: 0
@@ -11658,6 +11783,7 @@ GameObject:
   - component: {fileID: 1557736445}
   - component: {fileID: 1557736446}
   - component: {fileID: 1557736447}
+  - component: {fileID: 1557736448}
   m_Layer: 0
   m_Name: Flycam
   m_TagString: Untagged
@@ -11822,6 +11948,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 2bdea5a1e8d2407468958dc104150b30, type: 2}
+--- !u!114 &1557736448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557736440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1559143963
 GameObject:
   m_ObjectHideFlags: 0
@@ -12147,6 +12286,7 @@ GameObject:
   - component: {fileID: 1624669355}
   - component: {fileID: 1624669356}
   - component: {fileID: 1624669357}
+  - component: {fileID: 1624669358}
   m_Layer: 0
   m_Name: Elephant
   m_TagString: Untagged
@@ -12311,6 +12451,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 92ad981fd58504e4c97e814a0d6c4bd1, type: 2}
+--- !u!114 &1624669358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624669350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1632662773
 GameObject:
   m_ObjectHideFlags: 0
@@ -12326,6 +12479,7 @@ GameObject:
   - component: {fileID: 1632662778}
   - component: {fileID: 1632662779}
   - component: {fileID: 1632662780}
+  - component: {fileID: 1632662781}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -12490,6 +12644,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: e06dad6e4b8c47e42aa50d3715206801, type: 2}
+--- !u!114 &1632662781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632662773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1635719622
 GameObject:
   m_ObjectHideFlags: 0
@@ -12959,6 +13126,7 @@ GameObject:
   - component: {fileID: 1755606975}
   - component: {fileID: 1755606976}
   - component: {fileID: 1755606977}
+  - component: {fileID: 1755606978}
   m_Layer: 0
   m_Name: Rabbit
   m_TagString: Untagged
@@ -13123,6 +13291,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 844982a14d9e42c4fb644436c099220d, type: 2}
+--- !u!114 &1755606978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755606970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &1757329065
 GameObject:
   m_ObjectHideFlags: 0
@@ -13917,6 +14098,7 @@ GameObject:
   - component: {fileID: 2052174948}
   - component: {fileID: 2052174949}
   - component: {fileID: 2052174950}
+  - component: {fileID: 2052174951}
   m_Layer: 0
   m_Name: Grimace
   m_TagString: Untagged
@@ -14081,6 +14263,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalKey: {fileID: 11400000, guid: 828466802e733c9459c9339c3880ea23, type: 2}
+--- !u!114 &2052174951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052174943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &2064643809
 GameObject:
   m_ObjectHideFlags: 0
@@ -14157,7 +14352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 21}
+  m_AnchoredPosition: {x: 0, y: -2}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081376531
