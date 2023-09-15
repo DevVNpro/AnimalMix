@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Projects.Script.GenScripts
 {
-    public class StartAnimal : MonoBehaviour
+    public class ShowStartGen : MonoBehaviour
     {
         [SerializeField]  private List<GameObject> randomStarts;
         [SerializeField] private Image _image;
@@ -26,20 +26,31 @@ namespace Projects.Script.GenScripts
             }
         }
 
-        IEnumerator RandomStar()
-        {
+        IEnumerator RandomStar() {
             yield return new WaitForSeconds(3f);
-            Debug.Log("Số sao là :" + startNumber);
-            //  int ranNumber = Random.Range(1, 8);
             int check = 0;
+            float speedStart = 0;
             _image.enabled = true;
+            if (startNumber == 2)
+            {
+                speedStart = 1.5f;
+            }
+            else if (startNumber == 4)
+            {
+                speedStart = 0.8f;
+            }
+            else
+            {
+                speedStart = 0.5f;
+            }
+            Debug.Log("Toc do start là:" + speedStart);
             foreach (var star in randomStarts)
             {
                 check++;
                 SoundManager.Instance.PlayVfxMuSic("star");
                 star.gameObject.SetActive(true);
-                star.transform.LeanScale(new Vector3(1f, 1f), 1f).setEaseOutBack();
-                yield return new WaitForSeconds(1f);
+                star.transform.LeanScale(new Vector3(1f, 1f), speedStart).setEaseOutBack();
+                yield return new WaitForSeconds(speedStart);
                 if (check == startNumber)
                 {
                     SoundManager.Instance.PlayVfxMuSic("stars_lock");

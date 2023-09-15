@@ -17,7 +17,9 @@ namespace Projects.Script.PvP
         [Header("DeckTeam")] [SerializeField] private RectTransform dectTeam;
         [Header("EnemyTeam")] [SerializeField] private RectTransform enemyTeam;
 
-        [Header("ButtonWinLose")] [SerializeField] private GameObject buttonWinLose;
+        [Header("ButtonWinLose")] 
+        [SerializeField] private RectTransform buttonBattle;
+        [SerializeField] private RectTransform buttonCreate;
 
         [Header("TextBattle")] [SerializeField]  private GameObject textBattlePlayer;
         [SerializeField]  private GameObject textBattleEnemy;
@@ -36,6 +38,9 @@ namespace Projects.Script.PvP
         [Header("partical System")]
         [SerializeField]private GameObject particalLeft;
         [SerializeField]private GameObject particaRight;
+        [SerializeField] private GameObject particalCenter;
+        
+        
         
 
         bool endGame = false;
@@ -67,13 +72,16 @@ namespace Projects.Script.PvP
             LeanTween.move(backgroundEnemy, new Vector3(backgroundEnemy.anchoredPosition.x, 0), 2.5f).setEaseLinear();
             LeanTween.move(bluePattern, new Vector3(bluePattern.anchoredPosition.x, 1910f), 1.5f);
             yield return  new WaitForSeconds(2.3f);
-            buttonWinLose.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             imageWin.transform.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             yield return new WaitForSeconds(0.3f);
             SoundManager.Instance.PlayVfxMuSic("Win");
             yield return  new WaitForSeconds(1f);
             particalLeft.SetActive(true);
             particaRight.SetActive(true);
+            particalCenter.SetActive(true);
+            yield return  new WaitForSeconds(1.5f);
+            buttonBattle.LeanMove(new Vector3(0f, -300f), 1f).setEase((LeanTweenType.linear));
+            buttonCreate.LeanMove(new Vector3(0f, -550f), 1f).setEase((LeanTweenType.linear));
         }
         IEnumerator TurnOnLoseImg()
         {
@@ -86,14 +94,14 @@ namespace Projects.Script.PvP
             LeanTween.move(backgroundEnemyWin, new Vector3(backgroundEnemyWin.anchoredPosition.x, 0), 2.5f).setEaseLinear();
             LeanTween.move(yellowPattern, new Vector3(yellowPattern.anchoredPosition.x, 2013f), 1.5f);
             yield return  new WaitForSeconds(2.3f);   
-            buttonWinLose.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             imageLose.transform.LeanScale(new Vector3(1, 1), 3f).setEase(LeanTweenType.easeOutElastic);
             yield return new WaitForSeconds(0.3f);
             SoundManager.Instance.PlayVfxMuSic("Lose");
+            yield return  new WaitForSeconds(1f);
+            buttonBattle.LeanMove(new Vector3(0f, -300f), 1f).setEase((LeanTweenType.linear));
+            buttonCreate.LeanMove(new Vector3(0f, -550f), 1f).setEase((LeanTweenType.linear));
         }
-
-
-
+        
 
     }
 }

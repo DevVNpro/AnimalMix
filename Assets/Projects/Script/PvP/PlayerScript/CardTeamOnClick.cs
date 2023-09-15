@@ -132,9 +132,10 @@ namespace Projects.Script.PvP.PlayerScript
             transformButton.SetParent(parentAfterDrag);
             //block spam and animation background
             isMoving = false;
+            yield return new WaitForSeconds(DamageSender.timeFinish);
             playerTurn.SetActive(false);
             enemyTurn.SetActive(true);
-            yield return  new WaitForSeconds(4f);
+            yield return  new WaitForSeconds(1f);
             int cnt = 0;
             foreach (Transform slot in EnemyCards)
             {

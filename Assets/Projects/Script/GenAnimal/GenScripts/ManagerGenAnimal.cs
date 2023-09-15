@@ -57,7 +57,7 @@ namespace Projects.Script.ScripableObject.GenAnimal
                     if (characterData.Key == key)
                     {
                         characterImage.sprite = characterData.CharacterImg;
-                        StartAnimal.startNumber = characterData.Star;
+                        ShowStartGen.startNumber = characterData.Star;
                         SetAttackAnimal.setAttack = characterData.Star;
                         return;
                     }

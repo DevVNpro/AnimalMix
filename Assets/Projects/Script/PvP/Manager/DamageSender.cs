@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class DamageSender : MonoBehaviour
 {
+    public static float timeFinish;
   public void Settrigger(Collider2D other)
         {
 
@@ -15,10 +16,12 @@ public class DamageSender : MonoBehaviour
             int attack = transform.GetComponent<Card>().attack;
             if (attack >= health)
             {
+                timeFinish = 4;
                 StartCoroutine(DeductAttack(other));
             }
             else
             {
+                timeFinish = 2;
                 other.transform.Find("TextReceiver").GetComponentInChildren<ShowDamageReceiver>().StartShow(attack);
                 health -= attack;
             }

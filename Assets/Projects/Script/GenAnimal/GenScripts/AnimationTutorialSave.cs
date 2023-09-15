@@ -14,7 +14,7 @@ namespace Projects.Script.GenAnimal.GenScripts
 
         IEnumerator AnimationButtonn()
         {
-            yield return new WaitForSeconds(5.5f);
+            yield return new WaitForSeconds(7f);
             while (true)
             {
                 transform.LeanScale(new Vector3(0.15f, 0.15f), 0.6f);
